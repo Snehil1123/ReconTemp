@@ -29,6 +29,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JMenu;
 import javax.swing.JProgressBar;
+import javax.swing.Box;
 
 
 public class ReconTemplateFormat extends JFrame {
@@ -72,6 +73,7 @@ public class ReconTemplateFormat extends JFrame {
 	private JMenuBar menuBar;
 	private JMenu mnSampleMenu;
 	private JMenuItem mntmSampleMenuItem;
+	private Box horizontalBox;
 
 	/**
 	 * Launch the application.
@@ -155,6 +157,13 @@ public class ReconTemplateFormat extends JFrame {
 		gbc_label_2.gridx = 0;
 		gbc_label_2.gridy = 2;
 		contentPane.add(label_2, gbc_label_2);
+		
+		horizontalBox = Box.createHorizontalBox();
+		GridBagConstraints gbc_horizontalBox = new GridBagConstraints();
+		gbc_horizontalBox.insets = new Insets(0, 0, 5, 5);
+		gbc_horizontalBox.gridx = 4;
+		gbc_horizontalBox.gridy = 3;
+		contentPane.add(horizontalBox, gbc_horizontalBox);
 		
 		textField = new JTextField();
 		GridBagConstraints gbc_textField = new GridBagConstraints();
@@ -360,8 +369,15 @@ public class ReconTemplateFormat extends JFrame {
 		gbc_label_3.gridwidth = 7;
 		gbc_label_3.insets = new Insets(0, 0, 5, 5);
 		gbc_label_3.gridx = 0;
-		gbc_label_3.gridy = 9;
+		gbc_label_3.gridy = 10;
 		contentPane.add(label_3, gbc_label_3);
+		
+		btnDone = new JButton("Done");
+		GridBagConstraints gbc_btnDone = new GridBagConstraints();
+		gbc_btnDone.insets = new Insets(0, 0, 5, 0);
+		gbc_btnDone.gridx = 7;
+		gbc_btnDone.gridy = 10;
+		contentPane.add(btnDone, gbc_btnDone);
 		
 		btnNewMatch = new JButton("New Match");
 		btnNewMatch.addActionListener(new ActionListener() {
@@ -372,15 +388,8 @@ public class ReconTemplateFormat extends JFrame {
 		GridBagConstraints gbc_btnNewMatch = new GridBagConstraints();
 		gbc_btnNewMatch.insets = new Insets(0, 0, 5, 5);
 		gbc_btnNewMatch.gridx = 3;
-		gbc_btnNewMatch.gridy = 10;
+		gbc_btnNewMatch.gridy = 11;
 		contentPane.add(btnNewMatch, gbc_btnNewMatch);
-		
-		btnDone = new JButton("Done");
-		GridBagConstraints gbc_btnDone = new GridBagConstraints();
-		gbc_btnDone.insets = new Insets(0, 0, 5, 0);
-		gbc_btnDone.gridx = 7;
-		gbc_btnDone.gridy = 10;
-		contentPane.add(btnDone, gbc_btnDone);
 		
 		btnFullStats = new JButton("Full Stats");
 		GridBagConstraints gbc_btnFullStats = new GridBagConstraints();
