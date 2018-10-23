@@ -1,32 +1,20 @@
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import java.awt.GridLayout;
-import javax.swing.JLabel;
-import javax.swing.SwingConstants;
-import java.awt.GridBagLayout;
-import javax.swing.JTextField;
 import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.awt.Insets;
-
-import java.awt.Color;  
-import java.awt.Graphics;  
-import java.awt.event.FocusEvent;  
-import java.awt.event.FocusListener;  
-import javax.swing.plaf.basic.BasicTextFieldUI;  
-import javax.swing.text.JTextComponent;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import com.jgoodies.forms.factories.DefaultComponentFactory;
-import javax.swing.Timer;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
 import javax.swing.JCheckBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
 
 
-public class ReconTemplate extends JFrame {
+public class ReconTemplate extends JFrame implements ActionListener {
 
 	private JPanel contentPane;
 	private JTextField textField;
@@ -344,6 +332,12 @@ public class ReconTemplate extends JFrame {
 		gbc_btnFullStats.gridx = 6;
 		gbc_btnFullStats.gridy = 9;
 		contentPane.add(btnFullStats, gbc_btnFullStats);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
