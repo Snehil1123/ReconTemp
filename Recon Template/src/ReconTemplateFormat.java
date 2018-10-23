@@ -111,9 +111,9 @@ public class ReconTemplateFormat extends JFrame {
 		setContentPane(contentPane);
 		GridBagLayout gbl_contentPane = new GridBagLayout();
 		gbl_contentPane.columnWidths = new int[]{30, 0, 0, 0, 0, 0, 0, 0, 0};
-		gbl_contentPane.rowHeights = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+		gbl_contentPane.rowHeights = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 		gbl_contentPane.columnWeights = new double[]{0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, Double.MIN_VALUE};
-		gbl_contentPane.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+		gbl_contentPane.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		contentPane.setLayout(gbl_contentPane);
 		
 		btnStartMatch = new JButton("Start Match");
@@ -202,13 +202,6 @@ public class ReconTemplateFormat extends JFrame {
 		gbc_lblPenalty.gridy = 4;
 		contentPane.add(lblPenalty, gbc_lblPenalty);
 		
-		lblComments = new JLabel("Comments");
-		GridBagConstraints gbc_lblComments = new GridBagConstraints();
-		gbc_lblComments.insets = new Insets(0, 0, 5, 0);
-		gbc_lblComments.gridx = 7;
-		gbc_lblComments.gridy = 4;
-		contentPane.add(lblComments, gbc_lblComments);
-		
 		lblScoutName = new JLabel("Scout Name");
 		GridBagConstraints gbc_lblScoutName = new GridBagConstraints();
 		gbc_lblScoutName.insets = new Insets(0, 0, 5, 5);
@@ -223,21 +216,6 @@ public class ReconTemplateFormat extends JFrame {
 		gbc_chckbxCrossBaseline.gridx = 2;
 		gbc_chckbxCrossBaseline.gridy = 5;
 		contentPane.add(chckbxCrossBaseline, gbc_chckbxCrossBaseline);
-		
-		lblSwitch = new JLabel("Switch:");
-		GridBagConstraints gbc_lblSwitch = new GridBagConstraints();
-		gbc_lblSwitch.anchor = GridBagConstraints.EAST;
-		gbc_lblSwitch.insets = new Insets(0, 0, 5, 5);
-		gbc_lblSwitch.gridx = 3;
-		gbc_lblSwitch.gridy = 5;
-		contentPane.add(lblSwitch, gbc_lblSwitch);
-		
-		label = new JLabel("Press 1 to score");
-		GridBagConstraints gbc_label = new GridBagConstraints();
-		gbc_label.insets = new Insets(0, 0, 5, 5);
-		gbc_label.gridx = 4;
-		gbc_label.gridy = 5;
-		contentPane.add(label, gbc_label);
 		
 		chckbxParkonPlatform = new JCheckBox("Parked on Platform");
 		GridBagConstraints gbc_chckbxParkonPlatform = new GridBagConstraints();
@@ -255,20 +233,20 @@ public class ReconTemplateFormat extends JFrame {
 		gbc_chckbxScoreInSwitch.gridy = 6;
 		contentPane.add(chckbxScoreInSwitch, gbc_chckbxScoreInSwitch);
 		
-		lblScale = new JLabel("Scale:");
-		GridBagConstraints gbc_lblScale = new GridBagConstraints();
-		gbc_lblScale.anchor = GridBagConstraints.EAST;
-		gbc_lblScale.insets = new Insets(0, 0, 5, 5);
-		gbc_lblScale.gridx = 3;
-		gbc_lblScale.gridy = 6;
-		contentPane.add(lblScale, gbc_lblScale);
+		lblSwitch = new JLabel("Switch:");
+		GridBagConstraints gbc_lblSwitch = new GridBagConstraints();
+		gbc_lblSwitch.anchor = GridBagConstraints.EAST;
+		gbc_lblSwitch.insets = new Insets(0, 0, 5, 5);
+		gbc_lblSwitch.gridx = 3;
+		gbc_lblSwitch.gridy = 6;
+		contentPane.add(lblSwitch, gbc_lblSwitch);
 		
-		lblTimes_1 = new JLabel("Press 2 to score");
-		GridBagConstraints gbc_lblTimes_1 = new GridBagConstraints();
-		gbc_lblTimes_1.insets = new Insets(0, 0, 5, 5);
-		gbc_lblTimes_1.gridx = 4;
-		gbc_lblTimes_1.gridy = 6;
-		contentPane.add(lblTimes_1, gbc_lblTimes_1);
+		label = new JLabel("Press 1 to score");
+		GridBagConstraints gbc_label = new GridBagConstraints();
+		gbc_label.insets = new Insets(0, 0, 5, 5);
+		gbc_label.gridx = 4;
+		gbc_label.gridy = 6;
+		contentPane.add(label, gbc_label);
 		
 		chckbxClimbed = new JCheckBox("Climbed");
 		GridBagConstraints gbc_chckbxClimbed = new GridBagConstraints();
@@ -286,15 +264,6 @@ public class ReconTemplateFormat extends JFrame {
 		gbc_textField_4.gridy = 6;
 		contentPane.add(textField_4, gbc_textField_4);
 		textField_4.setColumns(10);
-		
-		textField_5 = new JTextField();
-		GridBagConstraints gbc_textField_5 = new GridBagConstraints();
-		gbc_textField_5.insets = new Insets(0, 0, 5, 0);
-		gbc_textField_5.fill = GridBagConstraints.HORIZONTAL;
-		gbc_textField_5.gridx = 7;
-		gbc_textField_5.gridy = 6;
-		contentPane.add(textField_5, gbc_textField_5);
-		textField_5.setColumns(10);
 		
 		lblMatchSection = new JLabel("Match Section");
 		GridBagConstraints gbc_lblMatchSection = new GridBagConstraints();
@@ -320,20 +289,20 @@ public class ReconTemplateFormat extends JFrame {
 		gbc_chckbxNewCheckBox.gridy = 7;
 		contentPane.add(chckbxNewCheckBox, gbc_chckbxNewCheckBox);
 		
-		lblOppSwitch = new JLabel("Opp. Switch:");
-		GridBagConstraints gbc_lblOppSwitch = new GridBagConstraints();
-		gbc_lblOppSwitch.anchor = GridBagConstraints.EAST;
-		gbc_lblOppSwitch.insets = new Insets(0, 0, 5, 5);
-		gbc_lblOppSwitch.gridx = 3;
-		gbc_lblOppSwitch.gridy = 7;
-		contentPane.add(lblOppSwitch, gbc_lblOppSwitch);
+		lblScale = new JLabel("Scale:");
+		GridBagConstraints gbc_lblScale = new GridBagConstraints();
+		gbc_lblScale.anchor = GridBagConstraints.EAST;
+		gbc_lblScale.insets = new Insets(0, 0, 5, 5);
+		gbc_lblScale.gridx = 3;
+		gbc_lblScale.gridy = 7;
+		contentPane.add(lblScale, gbc_lblScale);
 		
-		lblTimes_2 = new JLabel("Press 3 to score");
-		GridBagConstraints gbc_lblTimes_2 = new GridBagConstraints();
-		gbc_lblTimes_2.insets = new Insets(0, 0, 5, 5);
-		gbc_lblTimes_2.gridx = 4;
-		gbc_lblTimes_2.gridy = 7;
-		contentPane.add(lblTimes_2, gbc_lblTimes_2);
+		lblTimes_1 = new JLabel("Press 2 to score");
+		GridBagConstraints gbc_lblTimes_1 = new GridBagConstraints();
+		gbc_lblTimes_1.insets = new Insets(0, 0, 5, 5);
+		gbc_lblTimes_1.gridx = 4;
+		gbc_lblTimes_1.gridy = 7;
+		contentPane.add(lblTimes_1, gbc_lblTimes_1);
 		
 		chckbxAssistWithClimb = new JCheckBox("Assist with climb");
 		GridBagConstraints gbc_chckbxAssistWithClimb = new GridBagConstraints();
@@ -350,33 +319,65 @@ public class ReconTemplateFormat extends JFrame {
 		gbc_lblMatch.gridy = 8;
 		contentPane.add(lblMatch, gbc_lblMatch);
 		
+		lblOppSwitch = new JLabel("Opp. Switch:");
+		GridBagConstraints gbc_lblOppSwitch = new GridBagConstraints();
+		gbc_lblOppSwitch.anchor = GridBagConstraints.EAST;
+		gbc_lblOppSwitch.insets = new Insets(0, 0, 5, 5);
+		gbc_lblOppSwitch.gridx = 3;
+		gbc_lblOppSwitch.gridy = 8;
+		contentPane.add(lblOppSwitch, gbc_lblOppSwitch);
+		
+		lblTimes_2 = new JLabel("Press 3 to score");
+		GridBagConstraints gbc_lblTimes_2 = new GridBagConstraints();
+		gbc_lblTimes_2.insets = new Insets(0, 0, 5, 5);
+		gbc_lblTimes_2.gridx = 4;
+		gbc_lblTimes_2.gridy = 8;
+		contentPane.add(lblTimes_2, gbc_lblTimes_2);
+		
 		lblNewLabel = new JLabel("Vault/Exchange:");
 		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
 		gbc_lblNewLabel.insets = new Insets(0, 0, 5, 5);
 		gbc_lblNewLabel.gridx = 3;
-		gbc_lblNewLabel.gridy = 8;
+		gbc_lblNewLabel.gridy = 9;
 		contentPane.add(lblNewLabel, gbc_lblNewLabel);
 		
 		lblPressTo = new JLabel("Press 4 to score");
 		GridBagConstraints gbc_lblPressTo = new GridBagConstraints();
 		gbc_lblPressTo.insets = new Insets(0, 0, 5, 5);
 		gbc_lblPressTo.gridx = 4;
-		gbc_lblPressTo.gridy = 8;
+		gbc_lblPressTo.gridy = 9;
 		contentPane.add(lblPressTo, gbc_lblPressTo);
+		
+		lblComments = new JLabel("Comments");
+		GridBagConstraints gbc_lblComments = new GridBagConstraints();
+		gbc_lblComments.insets = new Insets(0, 0, 5, 5);
+		gbc_lblComments.gridx = 0;
+		gbc_lblComments.gridy = 10;
+		contentPane.add(lblComments, gbc_lblComments);
+		
+		textField_5 = new JTextField();
+		GridBagConstraints gbc_textField_5 = new GridBagConstraints();
+		gbc_textField_5.gridwidth = 7;
+		gbc_textField_5.insets = new Insets(0, 0, 5, 5);
+		gbc_textField_5.fill = GridBagConstraints.HORIZONTAL;
+		gbc_textField_5.gridx = 1;
+		gbc_textField_5.gridy = 10;
+		contentPane.add(textField_5, gbc_textField_5);
+		textField_5.setColumns(10);
 		
 		label_3 = new JLabel("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		GridBagConstraints gbc_label_3 = new GridBagConstraints();
 		gbc_label_3.gridwidth = 7;
 		gbc_label_3.insets = new Insets(0, 0, 5, 5);
 		gbc_label_3.gridx = 0;
-		gbc_label_3.gridy = 10;
+		gbc_label_3.gridy = 11;
 		contentPane.add(label_3, gbc_label_3);
 		
 		btnDone = new JButton("Done");
 		GridBagConstraints gbc_btnDone = new GridBagConstraints();
 		gbc_btnDone.insets = new Insets(0, 0, 5, 0);
 		gbc_btnDone.gridx = 7;
-		gbc_btnDone.gridy = 10;
+		gbc_btnDone.gridy = 11;
 		contentPane.add(btnDone, gbc_btnDone);
 		
 		btnNewMatch = new JButton("New Match");
@@ -386,16 +387,16 @@ public class ReconTemplateFormat extends JFrame {
 		});
 		
 		GridBagConstraints gbc_btnNewMatch = new GridBagConstraints();
-		gbc_btnNewMatch.insets = new Insets(0, 0, 5, 5);
-		gbc_btnNewMatch.gridx = 3;
-		gbc_btnNewMatch.gridy = 11;
+		gbc_btnNewMatch.insets = new Insets(0, 0, 0, 5);
+		gbc_btnNewMatch.gridx = 4;
+		gbc_btnNewMatch.gridy = 14;
 		contentPane.add(btnNewMatch, gbc_btnNewMatch);
 		
 		btnFullStats = new JButton("Full Stats");
 		GridBagConstraints gbc_btnFullStats = new GridBagConstraints();
 		gbc_btnFullStats.insets = new Insets(0, 0, 0, 5);
 		gbc_btnFullStats.gridx = 6;
-		gbc_btnFullStats.gridy = 13;
+		gbc_btnFullStats.gridy = 14;
 		contentPane.add(btnFullStats, gbc_btnFullStats);
 	}
 
