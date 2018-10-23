@@ -1,3 +1,4 @@
+import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -9,6 +10,9 @@ import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
@@ -332,6 +336,25 @@ public class ReconTemplate extends JFrame implements ActionListener {
 		gbc_btnFullStats.gridx = 6;
 		gbc_btnFullStats.gridy = 9;
 		contentPane.add(btnFullStats, gbc_btnFullStats);
+		
+		
+		//Adds menu bar and options on menu bar
+		JMenuBar bar = new JMenuBar();
+		JMenu file = new JMenu ("File");
+		JMenuItem newMenuItem = new JMenuItem ("New");
+		JMenuItem save = new JMenuItem ("Save");
+		JMenuItem close = new JMenuItem ("Terminate");
+		
+		file.add(newMenuItem);
+		file.add(save);
+		file.addSeparator();
+		file.add(close);
+		
+		bar.add(file);
+		
+		setJMenuBar(bar);
+		
+		
 	}
 
 	@Override
