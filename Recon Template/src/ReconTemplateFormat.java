@@ -75,6 +75,8 @@ public class ReconTemplateFormat extends JFrame {
 	private JMenuItem mntmSampleMenuItem;
 	private Box horizontalBox;
 	private JProgressBar progressBar;
+	
+//	ReconTemplateFormat rf; 
 
 	/**
 	 * Launch the application.
@@ -96,6 +98,8 @@ public class ReconTemplateFormat extends JFrame {
 	 * Create the frame.
 	 */
 	public ReconTemplateFormat() {
+//		rf = new ReconTemplateFormat();
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1141, 620);
 		
@@ -138,6 +142,8 @@ public class ReconTemplateFormat extends JFrame {
 		gbc_lblTimeRemaining.gridx = 6;
 		gbc_lblTimeRemaining.gridy = 1;
 		contentPane.add(lblTimeRemaining, gbc_lblTimeRemaining);
+		
+//		JProgressBar progressBar = new JProgressBar (0, task.getLengthofTask()); 
 		
 		btnStartMatch = new JButton("Start Match");
 		btnStartMatch.addActionListener(new ActionListener() {
@@ -366,6 +372,7 @@ public class ReconTemplateFormat extends JFrame {
 		btnNewMatch = new JButton("New Match");
 		btnNewMatch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+//				ReconTemplateFormat rf = new ReconTemplateFormat ();
 			}
 		});
 		
@@ -388,6 +395,11 @@ public class ReconTemplateFormat extends JFrame {
 		contentPane.add(label_3, gbc_label_3);
 		
 		btnDone = new JButton("Done");
+		btnDone.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
 		GridBagConstraints gbc_btnDone = new GridBagConstraints();
 		gbc_btnDone.insets = new Insets(0, 0, 5, 0);
 		gbc_btnDone.gridx = 7;
@@ -407,5 +419,14 @@ public class ReconTemplateFormat extends JFrame {
 		gbc_btnFullStats.gridy = 15;
 		contentPane.add(btnFullStats, gbc_btnFullStats);
 	}
+	
+/*	public void actionPerformed(ActionEvent e) {
+		String name = e.getActionCommand();
+		
+		if (name.equals("Done")) {
+			System.exit(0);
+		}
+		
+	} */
 
 }
