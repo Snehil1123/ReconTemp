@@ -112,6 +112,12 @@ public class ReconTemplateFormat extends JFrame {
 		//Adding new button to menu bar and functionality to new
 		mntmSampleMenuItemNew = new JMenuItem("New");
 		mnSampleMenu.add(mntmSampleMenuItemNew);
+		mntmSampleMenuItemNew.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ReconTemplateFormat news = new ReconTemplateFormat();
+			}
+		});
+		
 		
 		//Adding exit button to menu bar and functionality to exit
 		mntmSampleMenuItemExit = new JMenuItem("Exit");
@@ -216,13 +222,6 @@ public class ReconTemplateFormat extends JFrame {
 		gbc_lblTeleop.gridy = 5;
 		contentPane.add(lblTeleop, gbc_lblTeleop);
 		
-		lblEndgame = new JLabel("Endgame");
-		GridBagConstraints gbc_lblEndgame = new GridBagConstraints();
-		gbc_lblEndgame.insets = new Insets(0, 0, 5, 5);
-		gbc_lblEndgame.gridx = 5;
-		gbc_lblEndgame.gridy = 5;
-		contentPane.add(lblEndgame, gbc_lblEndgame);
-		
 		lblMatchSection = new JLabel("Match Section");
 		GridBagConstraints gbc_lblMatchSection = new GridBagConstraints();
 		gbc_lblMatchSection.insets = new Insets(0, 0, 5, 5);
@@ -230,10 +229,17 @@ public class ReconTemplateFormat extends JFrame {
 		gbc_lblMatchSection.gridy = 1;
 		contentPane.add(lblMatchSection, gbc_lblMatchSection);
 		
+		lblEndgame = new JLabel("Endgame");
+		GridBagConstraints gbc_lblEndgame = new GridBagConstraints();
+		gbc_lblEndgame.insets = new Insets(0, 0, 5, 5);
+		gbc_lblEndgame.gridx = 6;
+		gbc_lblEndgame.gridy = 5;
+		contentPane.add(lblEndgame, gbc_lblEndgame);
+		
 		lblPenalty = new JLabel("Penalty");
 		GridBagConstraints gbc_lblPenalty = new GridBagConstraints();
-		gbc_lblPenalty.insets = new Insets(0, 0, 5, 5);
-		gbc_lblPenalty.gridx = 6;
+		gbc_lblPenalty.insets = new Insets(0, 0, 5, 0);
+		gbc_lblPenalty.gridx = 7;
 		gbc_lblPenalty.gridy = 5;
 		contentPane.add(lblPenalty, gbc_lblPenalty);
 		
@@ -273,15 +279,15 @@ public class ReconTemplateFormat extends JFrame {
 		GridBagConstraints gbc_chckbxParkonPlatform = new GridBagConstraints();
 		gbc_chckbxParkonPlatform.anchor = GridBagConstraints.WEST;
 		gbc_chckbxParkonPlatform.insets = new Insets(0, 0, 5, 5);
-		gbc_chckbxParkonPlatform.gridx = 5;
+		gbc_chckbxParkonPlatform.gridx = 6;
 		gbc_chckbxParkonPlatform.gridy = 6;
 		contentPane.add(chckbxParkonPlatform, gbc_chckbxParkonPlatform);
 		
 		textField_4 = new JTextField();
 		GridBagConstraints gbc_textField_4 = new GridBagConstraints();
-		gbc_textField_4.insets = new Insets(0, 0, 5, 5);
+		gbc_textField_4.insets = new Insets(0, 0, 5, 0);
 		gbc_textField_4.fill = GridBagConstraints.HORIZONTAL;
-		gbc_textField_4.gridx = 6;
+		gbc_textField_4.gridx = 7;
 		gbc_textField_4.gridy = 6;
 		contentPane.add(textField_4, gbc_textField_4);
 		textField_4.setColumns(10);
@@ -315,7 +321,7 @@ public class ReconTemplateFormat extends JFrame {
 		GridBagConstraints gbc_chckbxClimbed = new GridBagConstraints();
 		gbc_chckbxClimbed.anchor = GridBagConstraints.WEST;
 		gbc_chckbxClimbed.insets = new Insets(0, 0, 5, 5);
-		gbc_chckbxClimbed.gridx = 5;
+		gbc_chckbxClimbed.gridx = 6;
 		gbc_chckbxClimbed.gridy = 7;
 		contentPane.add(chckbxClimbed, gbc_chckbxClimbed);
 		
@@ -357,7 +363,7 @@ public class ReconTemplateFormat extends JFrame {
 		GridBagConstraints gbc_chckbxAssistWithClimb = new GridBagConstraints();
 		gbc_chckbxAssistWithClimb.anchor = GridBagConstraints.WEST;
 		gbc_chckbxAssistWithClimb.insets = new Insets(0, 0, 5, 5);
-		gbc_chckbxAssistWithClimb.gridx = 5;
+		gbc_chckbxAssistWithClimb.gridx = 6;
 		gbc_chckbxAssistWithClimb.gridy = 8;
 		contentPane.add(chckbxAssistWithClimb, gbc_chckbxAssistWithClimb);
 		
@@ -417,18 +423,18 @@ public class ReconTemplateFormat extends JFrame {
 		gbc_label_3.gridy = 12;
 		contentPane.add(label_3, gbc_label_3);
 		
+		btnFullStats = new JButton("Full Stats");
+		GridBagConstraints gbc_btnFullStats = new GridBagConstraints();
+		gbc_btnFullStats.insets = new Insets(0, 0, 5, 5);
+		gbc_btnFullStats.gridx = 4;
+		gbc_btnFullStats.gridy = 13;
+		contentPane.add(btnFullStats, gbc_btnFullStats);
+		
 		GridBagConstraints gbc_btnNewMatch = new GridBagConstraints();
 		gbc_btnNewMatch.insets = new Insets(0, 0, 0, 5);
 		gbc_btnNewMatch.gridx = 4;
 		gbc_btnNewMatch.gridy = 15;
 		contentPane.add(btnNewMatch, gbc_btnNewMatch);
-		
-		btnFullStats = new JButton("Full Stats");
-		GridBagConstraints gbc_btnFullStats = new GridBagConstraints();
-		gbc_btnFullStats.insets = new Insets(0, 0, 0, 5);
-		gbc_btnFullStats.gridx = 6;
-		gbc_btnFullStats.gridy = 15;
-		contentPane.add(btnFullStats, gbc_btnFullStats);
 	}
 	
 /*	public void actionPerformed(ActionEvent e) {
