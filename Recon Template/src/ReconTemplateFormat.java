@@ -41,11 +41,8 @@ public class ReconTemplateFormat extends JFrame {
 	private JLabel lblScoutName;
 	private JLabel lblTeleop;
 	private JLabel lblReconTemplate;
-	private JLabel lblTimes_1;
-	private JLabel lblTimes_2;
 	private JButton btnStartMatch;
 	private JButton btnNewMatch;
-	private JLabel label;
 	private JLabel label_1;
 	private JLabel lblTimeRemaining;
 	private JLabel lblMatchSection;
@@ -67,7 +64,6 @@ public class ReconTemplateFormat extends JFrame {
 	private JLabel lblComments;
 	private JTextField textField_5;
 	private JLabel lblNewLabel;
-	private JLabel lblPressTo;
 	private JLabel label_3;
 	private JButton btnDone;
 	private JMenuBar menuBar;
@@ -75,6 +71,10 @@ public class ReconTemplateFormat extends JFrame {
 	private JMenuItem mntmSampleMenuItem;
 	private Box horizontalBox;
 	private JProgressBar progressBar;
+	private JTextField textField_1;
+	private JTextField textField_3;
+	private JTextField textField_6;
+	private JTextField textField_7;
 	
 //	ReconTemplateFormat rf; 
 
@@ -246,12 +246,14 @@ public class ReconTemplateFormat extends JFrame {
 		gbc_lblSwitch.gridy = 6;
 		contentPane.add(lblSwitch, gbc_lblSwitch);
 		
-		label = new JLabel("Press 1 to score");
-		GridBagConstraints gbc_label = new GridBagConstraints();
-		gbc_label.insets = new Insets(0, 0, 5, 5);
-		gbc_label.gridx = 4;
-		gbc_label.gridy = 6;
-		contentPane.add(label, gbc_label);
+		textField_1 = new JTextField();
+		GridBagConstraints gbc_textField_1 = new GridBagConstraints();
+		gbc_textField_1.insets = new Insets(0, 0, 5, 5);
+		gbc_textField_1.fill = GridBagConstraints.HORIZONTAL;
+		gbc_textField_1.gridx = 4;
+		gbc_textField_1.gridy = 6;
+		contentPane.add(textField_1, gbc_textField_1);
+		textField_1.setColumns(10);
 		
 		chckbxParkonPlatform = new JCheckBox("Parked on Platform");
 		GridBagConstraints gbc_chckbxParkonPlatform = new GridBagConstraints();
@@ -286,12 +288,14 @@ public class ReconTemplateFormat extends JFrame {
 		gbc_lblScale.gridy = 7;
 		contentPane.add(lblScale, gbc_lblScale);
 		
-		lblTimes_1 = new JLabel("Press 2 to score");
-		GridBagConstraints gbc_lblTimes_1 = new GridBagConstraints();
-		gbc_lblTimes_1.insets = new Insets(0, 0, 5, 5);
-		gbc_lblTimes_1.gridx = 4;
-		gbc_lblTimes_1.gridy = 7;
-		contentPane.add(lblTimes_1, gbc_lblTimes_1);
+		textField_3 = new JTextField();
+		GridBagConstraints gbc_textField_3 = new GridBagConstraints();
+		gbc_textField_3.insets = new Insets(0, 0, 5, 5);
+		gbc_textField_3.fill = GridBagConstraints.HORIZONTAL;
+		gbc_textField_3.gridx = 4;
+		gbc_textField_3.gridy = 7;
+		contentPane.add(textField_3, gbc_textField_3);
+		textField_3.setColumns(10);
 		
 		chckbxClimbed = new JCheckBox("Climbed");
 		GridBagConstraints gbc_chckbxClimbed = new GridBagConstraints();
@@ -326,12 +330,14 @@ public class ReconTemplateFormat extends JFrame {
 		gbc_lblOppSwitch.gridy = 8;
 		contentPane.add(lblOppSwitch, gbc_lblOppSwitch);
 		
-		lblTimes_2 = new JLabel("Press 3 to score");
-		GridBagConstraints gbc_lblTimes_2 = new GridBagConstraints();
-		gbc_lblTimes_2.insets = new Insets(0, 0, 5, 5);
-		gbc_lblTimes_2.gridx = 4;
-		gbc_lblTimes_2.gridy = 8;
-		contentPane.add(lblTimes_2, gbc_lblTimes_2);
+		textField_6 = new JTextField();
+		GridBagConstraints gbc_textField_6 = new GridBagConstraints();
+		gbc_textField_6.insets = new Insets(0, 0, 5, 5);
+		gbc_textField_6.fill = GridBagConstraints.HORIZONTAL;
+		gbc_textField_6.gridx = 4;
+		gbc_textField_6.gridy = 8;
+		contentPane.add(textField_6, gbc_textField_6);
+		textField_6.setColumns(10);
 		
 		chckbxAssistWithClimb = new JCheckBox("Assist with climb");
 		GridBagConstraints gbc_chckbxAssistWithClimb = new GridBagConstraints();
@@ -350,17 +356,20 @@ public class ReconTemplateFormat extends JFrame {
 		
 		lblNewLabel = new JLabel("Vault/Exchange:");
 		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
+		gbc_lblNewLabel.anchor = GridBagConstraints.EAST;
 		gbc_lblNewLabel.insets = new Insets(0, 0, 5, 5);
 		gbc_lblNewLabel.gridx = 3;
 		gbc_lblNewLabel.gridy = 9;
 		contentPane.add(lblNewLabel, gbc_lblNewLabel);
 		
-		lblPressTo = new JLabel("Press 4 to score");
-		GridBagConstraints gbc_lblPressTo = new GridBagConstraints();
-		gbc_lblPressTo.insets = new Insets(0, 0, 5, 5);
-		gbc_lblPressTo.gridx = 4;
-		gbc_lblPressTo.gridy = 9;
-		contentPane.add(lblPressTo, gbc_lblPressTo);
+		textField_7 = new JTextField();
+		GridBagConstraints gbc_textField_7 = new GridBagConstraints();
+		gbc_textField_7.insets = new Insets(0, 0, 5, 5);
+		gbc_textField_7.fill = GridBagConstraints.HORIZONTAL;
+		gbc_textField_7.gridx = 4;
+		gbc_textField_7.gridy = 9;
+		contentPane.add(textField_7, gbc_textField_7);
+		textField_7.setColumns(10);
 		
 		lblComments = new JLabel("Comments");
 		GridBagConstraints gbc_lblComments = new GridBagConstraints();
@@ -372,7 +381,7 @@ public class ReconTemplateFormat extends JFrame {
 		btnNewMatch = new JButton("New Match");
 		btnNewMatch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-//				ReconTemplateFormat rf = new ReconTemplateFormat ();
+//			ReconTemplateFormat	rf1 = new ReconTemplateFormat ();
 			}
 		});
 		
