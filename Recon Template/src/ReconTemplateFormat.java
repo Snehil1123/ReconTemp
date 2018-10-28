@@ -65,10 +65,10 @@ public class ReconTemplateFormat extends JFrame {
 	private JTextField textField_5;
 	private JLabel lblNewLabel;
 	private JLabel label_3;
-	private JButton btnDone;
 	private JMenuBar menuBar;
 	private JMenu mnSampleMenu;
-	private JMenuItem mntmSampleMenuItem;
+	private JMenuItem mntmSampleMenuItemNew;
+	private JMenuItem mntmSampleMenuItemExit;
 	private Box horizontalBox;
 	private JProgressBar progressBar;
 	private JTextField textField_1;
@@ -106,11 +106,25 @@ public class ReconTemplateFormat extends JFrame {
 		menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		
-		mnSampleMenu = new JMenu("Sample Menu");
+		mnSampleMenu = new JMenu("File");
 		menuBar.add(mnSampleMenu);
 		
-		mntmSampleMenuItem = new JMenuItem("Sample Menu Item");
-		mnSampleMenu.add(mntmSampleMenuItem);
+		//Adding new button to menu bar and functionality to new
+		mntmSampleMenuItemNew = new JMenuItem("New");
+		mnSampleMenu.add(mntmSampleMenuItemNew);
+		
+		//Adding exit button to menu bar and functionality to exit
+		mntmSampleMenuItemExit = new JMenuItem("Exit");
+		mntmSampleMenuItemExit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
+		mnSampleMenu.add(mntmSampleMenuItemExit);
+/*		public void actionPerformed(ActionEvent e) {
+			System.exit(0);
+		} */
+		
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -403,18 +417,6 @@ public class ReconTemplateFormat extends JFrame {
 		gbc_label_3.gridy = 12;
 		contentPane.add(label_3, gbc_label_3);
 		
-		btnDone = new JButton("Done");
-		btnDone.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				System.exit(0);
-			}
-		});
-		GridBagConstraints gbc_btnDone = new GridBagConstraints();
-		gbc_btnDone.insets = new Insets(0, 0, 5, 0);
-		gbc_btnDone.gridx = 7;
-		gbc_btnDone.gridy = 13;
-		contentPane.add(btnDone, gbc_btnDone);
-		
 		GridBagConstraints gbc_btnNewMatch = new GridBagConstraints();
 		gbc_btnNewMatch.insets = new Insets(0, 0, 0, 5);
 		gbc_btnNewMatch.gridx = 4;
@@ -432,10 +434,8 @@ public class ReconTemplateFormat extends JFrame {
 /*	public void actionPerformed(ActionEvent e) {
 		String name = e.getActionCommand();
 		
-		if (name.equals("Done")) {
+		if (name.equals("Exit")) {
 			System.exit(0);
-		}
-		
+		} 
 	} */
-
 }
