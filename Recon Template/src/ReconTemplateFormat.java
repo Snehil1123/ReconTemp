@@ -30,6 +30,8 @@ import javax.swing.JMenuItem;
 import javax.swing.JMenu;
 import javax.swing.JProgressBar;
 import javax.swing.Box;
+import javax.swing.event.ChangeListener;
+import javax.swing.event.ChangeEvent;
 
 
 public class ReconTemplateFormat extends JFrame {
@@ -177,6 +179,10 @@ public class ReconTemplateFormat extends JFrame {
 		contentPane.add(btnStartMatch, gbc_btnStartMatch);
 		
 		progressBar = new JProgressBar();
+		progressBar.addChangeListener(new ChangeListener() {
+			public void stateChanged(ChangeEvent e) {
+			}
+		});
 		GridBagConstraints gbc_progressBar = new GridBagConstraints();
 		gbc_progressBar.insets = new Insets(0, 0, 5, 5);
 		gbc_progressBar.gridx = 6;
