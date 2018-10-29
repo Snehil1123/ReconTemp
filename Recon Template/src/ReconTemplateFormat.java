@@ -62,9 +62,7 @@ public class ReconTemplateFormat extends JFrame {
 	private JLabel lblPenalty;
 	private JTextField textField_4;
 	private JLabel lblComments;
-	private JTextField textField_5;
 	private JLabel lblNewLabel;
-	private JLabel label_3;
 	private JMenuBar menuBar;
 	private JMenu mnSampleMenu;
 	private JMenuItem mntmSampleMenuItemNew;
@@ -75,6 +73,7 @@ public class ReconTemplateFormat extends JFrame {
 	private JTextField textField_3;
 	private JTextField textField_6;
 	private JTextField textField_7;
+	private JTextField textField_5;
 	
 //	ReconTemplateFormat rf; 
 
@@ -393,6 +392,7 @@ public class ReconTemplateFormat extends JFrame {
 		
 		lblComments = new JLabel("Comments");
 		GridBagConstraints gbc_lblComments = new GridBagConstraints();
+		gbc_lblComments.anchor = GridBagConstraints.EAST;
 		gbc_lblComments.insets = new Insets(0, 0, 5, 5);
 		gbc_lblComments.gridx = 0;
 		gbc_lblComments.gridy = 11;
@@ -408,31 +408,22 @@ public class ReconTemplateFormat extends JFrame {
 		textField_5 = new JTextField();
 		GridBagConstraints gbc_textField_5 = new GridBagConstraints();
 		gbc_textField_5.gridwidth = 7;
-		gbc_textField_5.insets = new Insets(0, 0, 5, 0);
+		gbc_textField_5.insets = new Insets(0, 0, 5, 5);
 		gbc_textField_5.fill = GridBagConstraints.HORIZONTAL;
 		gbc_textField_5.gridx = 1;
 		gbc_textField_5.gridy = 11;
 		contentPane.add(textField_5, gbc_textField_5);
 		textField_5.setColumns(10);
 		
-		label_3 = new JLabel("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
-		GridBagConstraints gbc_label_3 = new GridBagConstraints();
-		gbc_label_3.gridwidth = 7;
-		gbc_label_3.insets = new Insets(0, 0, 5, 5);
-		gbc_label_3.gridx = 0;
-		gbc_label_3.gridy = 12;
-		contentPane.add(label_3, gbc_label_3);
-		
 		btnFullStats = new JButton("Full Stats");
 		GridBagConstraints gbc_btnFullStats = new GridBagConstraints();
-		gbc_btnFullStats.insets = new Insets(0, 0, 5, 5);
-		gbc_btnFullStats.gridx = 4;
-		gbc_btnFullStats.gridy = 13;
+		gbc_btnFullStats.insets = new Insets(0, 0, 5, 0);
+		gbc_btnFullStats.gridx = 7;
+		gbc_btnFullStats.gridy = 14;
 		contentPane.add(btnFullStats, gbc_btnFullStats);
 		
 		GridBagConstraints gbc_btnNewMatch = new GridBagConstraints();
-		gbc_btnNewMatch.insets = new Insets(0, 0, 0, 5);
-		gbc_btnNewMatch.gridx = 4;
+		gbc_btnNewMatch.gridx = 7;
 		gbc_btnNewMatch.gridy = 15;
 		contentPane.add(btnNewMatch, gbc_btnNewMatch);
 	}
