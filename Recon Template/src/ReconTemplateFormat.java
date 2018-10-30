@@ -1,41 +1,32 @@
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import java.awt.GridLayout;
-import javax.swing.JLabel;
-import javax.swing.SwingConstants;
-import java.awt.GridBagLayout;
-import javax.swing.JTextField;
 import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.awt.Insets;
-
-import java.awt.Color;  
-import java.awt.Graphics;  
-import java.awt.event.FocusEvent;  
-import java.awt.event.FocusListener;  
-import javax.swing.plaf.basic.BasicTextFieldUI;  
-import javax.swing.text.JTextComponent;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import com.jgoodies.forms.factories.DefaultComponentFactory;
-import javax.swing.Timer;
+import java.awt.event.ActionListener;
+
+import javax.swing.Box;
+import javax.swing.JButton;
 import javax.swing.JCheckBox;
-import javax.swing.JToolBar;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
-import javax.swing.JMenu;
+import javax.swing.JPanel;
 import javax.swing.JProgressBar;
-import javax.swing.Box;
-import javax.swing.event.ChangeListener;
+import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
 import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
 
 public class ReconTemplateFormat extends JFrame {
 
+
+	private static final long serialVersionUID = 1L;
+	
+	
 	private JPanel contentPane;
 	private JTextField textField;
 	private JTextField textField_2;
@@ -60,7 +51,6 @@ public class ReconTemplateFormat extends JFrame {
 	private JCheckBox chckbxParkonPlatform;
 	private JCheckBox chckbxClimbed;
 	private JCheckBox chckbxAssistWithClimb;
-	private JButton btnFullStats;
 	private JLabel lblPenalty;
 	private JTextField textField_4;
 	private JLabel lblComments;
@@ -76,6 +66,7 @@ public class ReconTemplateFormat extends JFrame {
 	private JTextField textField_6;
 	private JTextField textField_7;
 	private JTextField textField_5;
+	private JTextField textField_8;
 	
 //	ReconTemplateFormat rf; 
 
@@ -115,7 +106,7 @@ public class ReconTemplateFormat extends JFrame {
 		mnSampleMenu.add(mntmSampleMenuItemNew);
 		mntmSampleMenuItemNew.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				ReconTemplateFormat news = new ReconTemplateFormat();
+//				ReconTemplateFormat news = new ReconTemplateFormat();
 			}
 		});
 		
@@ -157,13 +148,6 @@ public class ReconTemplateFormat extends JFrame {
 		gbc_label_1.gridy = 1;
 		contentPane.add(label_1, gbc_label_1);
 		
-		lblTimeRemaining = new JLabel("Time Remaining");
-		GridBagConstraints gbc_lblTimeRemaining = new GridBagConstraints();
-		gbc_lblTimeRemaining.insets = new Insets(0, 0, 5, 5);
-		gbc_lblTimeRemaining.gridx = 6;
-		gbc_lblTimeRemaining.gridy = 1;
-		contentPane.add(lblTimeRemaining, gbc_lblTimeRemaining);
-		
 //		JProgressBar progressBar = new JProgressBar (0, task.getLengthofTask()); 
 		
 		btnStartMatch = new JButton("Start Match");
@@ -171,6 +155,13 @@ public class ReconTemplateFormat extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
+		
+		lblTimeRemaining = new JLabel("Time Remaining");
+		GridBagConstraints gbc_lblTimeRemaining = new GridBagConstraints();
+		gbc_lblTimeRemaining.insets = new Insets(0, 0, 5, 0);
+		gbc_lblTimeRemaining.gridx = 7;
+		gbc_lblTimeRemaining.gridy = 1;
+		contentPane.add(lblTimeRemaining, gbc_lblTimeRemaining);
 		GridBagConstraints gbc_btnStartMatch = new GridBagConstraints();
 		gbc_btnStartMatch.gridwidth = 2;
 		gbc_btnStartMatch.insets = new Insets(0, 0, 5, 5);
@@ -178,14 +169,23 @@ public class ReconTemplateFormat extends JFrame {
 		gbc_btnStartMatch.gridy = 2;
 		contentPane.add(btnStartMatch, gbc_btnStartMatch);
 		
+		textField_8 = new JTextField();
+		GridBagConstraints gbc_textField_8 = new GridBagConstraints();
+		gbc_textField_8.insets = new Insets(0, 0, 5, 5);
+		gbc_textField_8.fill = GridBagConstraints.HORIZONTAL;
+		gbc_textField_8.gridx = 5;
+		gbc_textField_8.gridy = 2;
+		contentPane.add(textField_8, gbc_textField_8);
+		textField_8.setColumns(10);
+		
 		progressBar = new JProgressBar();
 		progressBar.addChangeListener(new ChangeListener() {
 			public void stateChanged(ChangeEvent e) {
 			}
-		});
+		}); 
 		GridBagConstraints gbc_progressBar = new GridBagConstraints();
-		gbc_progressBar.insets = new Insets(0, 0, 5, 5);
-		gbc_progressBar.gridx = 6;
+		gbc_progressBar.insets = new Insets(0, 0, 5, 0);
+		gbc_progressBar.gridx = 7;
 		gbc_progressBar.gridy = 2;
 		contentPane.add(progressBar, gbc_progressBar);
 		
@@ -227,7 +227,8 @@ public class ReconTemplateFormat extends JFrame {
 		gbc_lblTeleop.gridy = 5;
 		contentPane.add(lblTeleop, gbc_lblTeleop);
 		
-		lblMatchSection = new JLabel("Match Section");
+		//Adds team number heading
+		lblMatchSection = new JLabel("Team Number");
 		GridBagConstraints gbc_lblMatchSection = new GridBagConstraints();
 		gbc_lblMatchSection.insets = new Insets(0, 0, 5, 5);
 		gbc_lblMatchSection.gridx = 5;
@@ -414,19 +415,12 @@ public class ReconTemplateFormat extends JFrame {
 		textField_5 = new JTextField();
 		GridBagConstraints gbc_textField_5 = new GridBagConstraints();
 		gbc_textField_5.gridwidth = 7;
-		gbc_textField_5.insets = new Insets(0, 0, 5, 5);
+		gbc_textField_5.insets = new Insets(0, 0, 5, 0);
 		gbc_textField_5.fill = GridBagConstraints.HORIZONTAL;
 		gbc_textField_5.gridx = 1;
 		gbc_textField_5.gridy = 11;
 		contentPane.add(textField_5, gbc_textField_5);
 		textField_5.setColumns(10);
-		
-		btnFullStats = new JButton("Full Stats");
-		GridBagConstraints gbc_btnFullStats = new GridBagConstraints();
-		gbc_btnFullStats.insets = new Insets(0, 0, 5, 0);
-		gbc_btnFullStats.gridx = 7;
-		gbc_btnFullStats.gridy = 14;
-		contentPane.add(btnFullStats, gbc_btnFullStats);
 		
 		GridBagConstraints gbc_btnNewMatch = new GridBagConstraints();
 		gbc_btnNewMatch.gridx = 7;
