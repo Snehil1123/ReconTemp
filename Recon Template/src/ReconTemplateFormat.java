@@ -15,6 +15,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
+import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.event.ChangeEvent;
@@ -27,6 +28,7 @@ public class ReconTemplateFormat extends JFrame {
 	private static final long serialVersionUID = 1L;
 	
 	
+	private JTabbedPane tabPane;
 	private JPanel contentPane;
 	private JTextField textField;
 	private JTextField textField_2;
@@ -90,7 +92,13 @@ public class ReconTemplateFormat extends JFrame {
 	 * Create the frame.
 	 */
 	public ReconTemplateFormat() {
-//		rf = new ReconTemplateFormat();
+		
+		
+//		ReconTemplateFormat rf = new ReconTemplateFormat();
+		
+		tabPane = new JTabbedPane();
+//		tabPane.addTab("Rename this", rf);
+		
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1141, 620);
@@ -101,12 +109,15 @@ public class ReconTemplateFormat extends JFrame {
 		mnSampleMenu = new JMenu("File");
 		menuBar.add(mnSampleMenu);
 		
+		add(tabPane);
+		
 		//Adding new button to menu bar and functionality to new
 		mntmSampleMenuItemNew = new JMenuItem("New");
 		mnSampleMenu.add(mntmSampleMenuItemNew);
 		mntmSampleMenuItemNew.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-//				ReconTemplateFormat news = new ReconTemplateFormat();
+//				ReconTemplateFormat rf = new ReconTemplateFormat();
+//				tabPane.addTab("Rename this", rf);
 			}
 		});
 		
