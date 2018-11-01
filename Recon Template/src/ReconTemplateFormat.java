@@ -15,7 +15,6 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
-import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.event.ChangeEvent;
@@ -28,7 +27,7 @@ public class ReconTemplateFormat extends JFrame {
 	private static final long serialVersionUID = 1L;
 	
 	
-	private JTabbedPane tabPane;
+//	private JTabbedPane tabPane;
 	private JPanel contentPane;
 	private JTextField textField;
 	private JTextField textField_2;
