@@ -69,6 +69,8 @@ public class ReconTemplateFormat extends JFrame {
 	private JTextField textField_7;
 	private JTextField textField_5;
 	private JTextField textField_8;
+	private JTextField textField_9;
+	private JLabel lblTally;
 	
 //	ReconTemplateFormat rf; 
 
@@ -109,7 +111,7 @@ public class ReconTemplateFormat extends JFrame {
 		mnSampleMenu = new JMenu("File");
 		menuBar.add(mnSampleMenu);
 		
-		add(tabPane);
+		getContentPane().add(tabPane);
 		
 		//Adding new button to menu bar and functionality to new
 		mntmSampleMenuItemNew = new JMenuItem("New");
@@ -139,9 +141,9 @@ public class ReconTemplateFormat extends JFrame {
 		setContentPane(contentPane);
 		GridBagLayout gbl_contentPane = new GridBagLayout();
 		gbl_contentPane.columnWidths = new int[]{30, 0, 0, 0, 0, 0, 0, 0, 0};
-		gbl_contentPane.rowHeights = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-		gbl_contentPane.columnWeights = new double[]{0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, Double.MIN_VALUE};
-		gbl_contentPane.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+		gbl_contentPane.rowHeights = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+		gbl_contentPane.columnWeights = new double[]{0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, Double.MIN_VALUE};
+		gbl_contentPane.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		contentPane.setLayout(gbl_contentPane);
 		
 		lblReconTemplate = new JLabel("POWER UP Recon Template");
@@ -408,14 +410,6 @@ public class ReconTemplateFormat extends JFrame {
 		contentPane.add(textField_7, gbc_textField_7);
 		textField_7.setColumns(10);
 		
-		lblComments = new JLabel("Comments");
-		GridBagConstraints gbc_lblComments = new GridBagConstraints();
-		gbc_lblComments.anchor = GridBagConstraints.EAST;
-		gbc_lblComments.insets = new Insets(0, 0, 5, 5);
-		gbc_lblComments.gridx = 0;
-		gbc_lblComments.gridy = 11;
-		contentPane.add(lblComments, gbc_lblComments);
-		
 		btnNewMatch = new JButton("New Match");
 		btnNewMatch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -423,19 +417,44 @@ public class ReconTemplateFormat extends JFrame {
 			}
 		});
 		
+		lblTally = new JLabel("Tally: ");
+		GridBagConstraints gbc_lblTally = new GridBagConstraints();
+		gbc_lblTally.insets = new Insets(0, 0, 5, 5);
+		gbc_lblTally.anchor = GridBagConstraints.EAST;
+		gbc_lblTally.gridx = 3;
+		gbc_lblTally.gridy = 10;
+		contentPane.add(lblTally, gbc_lblTally);
+		
+		textField_9 = new JTextField();
+		GridBagConstraints gbc_textField_9 = new GridBagConstraints();
+		gbc_textField_9.insets = new Insets(0, 0, 5, 5);
+		gbc_textField_9.fill = GridBagConstraints.HORIZONTAL;
+		gbc_textField_9.gridx = 4;
+		gbc_textField_9.gridy = 10;
+		contentPane.add(textField_9, gbc_textField_9);
+		textField_9.setColumns(10);
+		
+		lblComments = new JLabel("Comments");
+		GridBagConstraints gbc_lblComments = new GridBagConstraints();
+		gbc_lblComments.anchor = GridBagConstraints.EAST;
+		gbc_lblComments.insets = new Insets(0, 0, 5, 5);
+		gbc_lblComments.gridx = 0;
+		gbc_lblComments.gridy = 12;
+		contentPane.add(lblComments, gbc_lblComments);
+		
 		textField_5 = new JTextField();
 		GridBagConstraints gbc_textField_5 = new GridBagConstraints();
 		gbc_textField_5.gridwidth = 7;
 		gbc_textField_5.insets = new Insets(0, 0, 5, 0);
 		gbc_textField_5.fill = GridBagConstraints.HORIZONTAL;
 		gbc_textField_5.gridx = 1;
-		gbc_textField_5.gridy = 11;
+		gbc_textField_5.gridy = 12;
 		contentPane.add(textField_5, gbc_textField_5);
 		textField_5.setColumns(10);
 		
 		GridBagConstraints gbc_btnNewMatch = new GridBagConstraints();
 		gbc_btnNewMatch.gridx = 7;
-		gbc_btnNewMatch.gridy = 15;
+		gbc_btnNewMatch.gridy = 16;
 		contentPane.add(btnNewMatch, gbc_btnNewMatch);
 	}
 	
