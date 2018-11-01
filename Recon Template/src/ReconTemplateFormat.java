@@ -111,7 +111,7 @@ public class ReconTemplateFormat extends JFrame {
 		mnSampleMenu = new JMenu("File");
 		menuBar.add(mnSampleMenu);
 		
-		getContentPane().add(tabPane);
+//		getContentPane().add(tabPane);
 		
 		//Adding new button to menu bar and functionality to new
 		mntmSampleMenuItemNew = new JMenuItem("New");
