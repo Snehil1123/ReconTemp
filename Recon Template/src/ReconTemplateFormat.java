@@ -98,7 +98,7 @@ public class ReconTemplateFormat extends JFrame {
 		
 //		ReconTemplateFormat rf = new ReconTemplateFormat();
 		
-		tabPane = new JTabbedPane();
+//		tabPane = new JTabbedPane();
 //		tabPane.addTab("Rename this", rf);
 		
 		
