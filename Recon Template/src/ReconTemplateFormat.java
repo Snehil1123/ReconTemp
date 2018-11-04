@@ -14,11 +14,8 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
-import javax.swing.JProgressBar;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
 
 
 public class ReconTemplateFormat extends JFrame {
@@ -35,10 +32,8 @@ public class ReconTemplateFormat extends JFrame {
 	private JLabel lblScoutName;
 	private JLabel lblTeleop;
 	private JLabel lblReconTemplate;
-	private JButton btnStartMatch;
 	private JButton btnNewMatch;
 	private JLabel label_1;
-	private JLabel lblTimeRemaining;
 	private JLabel lblMatchSection;
 	private JLabel lblAutomode;
 	private JCheckBox chckbxCrossBaseline;
@@ -61,7 +56,6 @@ public class ReconTemplateFormat extends JFrame {
 	private JMenuItem mntmSampleMenuItemNew;
 	private JMenuItem mntmSampleMenuItemExit;
 	private Box horizontalBox;
-	private JProgressBar progressBar;
 	private JTextField textField_1;
 	private JTextField textField_3;
 	private JTextField textField_6;
@@ -153,6 +147,14 @@ public class ReconTemplateFormat extends JFrame {
 		gbc_lblReconTemplate.gridy = 0;
 		contentPane.add(lblReconTemplate, gbc_lblReconTemplate);
 		
+		//Adds team number heading
+		lblMatchSection = new JLabel("Team Number");
+		GridBagConstraints gbc_lblMatchSection = new GridBagConstraints();
+		gbc_lblMatchSection.insets = new Insets(0, 0, 5, 5);
+		gbc_lblMatchSection.gridx = 3;
+		gbc_lblMatchSection.gridy = 1;
+		contentPane.add(lblMatchSection, gbc_lblMatchSection);
+		
 		label_1 = new JLabel("");
 		GridBagConstraints gbc_label_1 = new GridBagConstraints();
 		gbc_label_1.insets = new Insets(0, 0, 5, 5);
@@ -160,46 +162,14 @@ public class ReconTemplateFormat extends JFrame {
 		gbc_label_1.gridy = 1;
 		contentPane.add(label_1, gbc_label_1);
 		
-//		JProgressBar progressBar = new JProgressBar (0, task.getLengthofTask()); 
-		
-		btnStartMatch = new JButton("Start Match");
-		btnStartMatch.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
-		
-		lblTimeRemaining = new JLabel("Time Remaining");
-		GridBagConstraints gbc_lblTimeRemaining = new GridBagConstraints();
-		gbc_lblTimeRemaining.insets = new Insets(0, 0, 5, 0);
-		gbc_lblTimeRemaining.gridx = 7;
-		gbc_lblTimeRemaining.gridy = 1;
-		contentPane.add(lblTimeRemaining, gbc_lblTimeRemaining);
-		GridBagConstraints gbc_btnStartMatch = new GridBagConstraints();
-		gbc_btnStartMatch.gridwidth = 2;
-		gbc_btnStartMatch.insets = new Insets(0, 0, 5, 5);
-		gbc_btnStartMatch.gridx = 0;
-		gbc_btnStartMatch.gridy = 2;
-		contentPane.add(btnStartMatch, gbc_btnStartMatch);
-		
 		textField_8 = new JTextField();
 		GridBagConstraints gbc_textField_8 = new GridBagConstraints();
 		gbc_textField_8.insets = new Insets(0, 0, 5, 5);
 		gbc_textField_8.fill = GridBagConstraints.HORIZONTAL;
-		gbc_textField_8.gridx = 5;
+		gbc_textField_8.gridx = 3;
 		gbc_textField_8.gridy = 2;
 		contentPane.add(textField_8, gbc_textField_8);
 		textField_8.setColumns(10);
-		
-		progressBar = new JProgressBar();
-		progressBar.addChangeListener(new ChangeListener() {
-			public void stateChanged(ChangeEvent e) {
-			}
-		}); 
-		GridBagConstraints gbc_progressBar = new GridBagConstraints();
-		gbc_progressBar.insets = new Insets(0, 0, 5, 0);
-		gbc_progressBar.gridx = 7;
-		gbc_progressBar.gridy = 2;
-		contentPane.add(progressBar, gbc_progressBar);
 		
 		horizontalBox = Box.createHorizontalBox();
 		GridBagConstraints gbc_horizontalBox = new GridBagConstraints();
@@ -238,14 +208,6 @@ public class ReconTemplateFormat extends JFrame {
 		gbc_lblTeleop.gridx = 4;
 		gbc_lblTeleop.gridy = 5;
 		contentPane.add(lblTeleop, gbc_lblTeleop);
-		
-		//Adds team number heading
-		lblMatchSection = new JLabel("Team Number");
-		GridBagConstraints gbc_lblMatchSection = new GridBagConstraints();
-		gbc_lblMatchSection.insets = new Insets(0, 0, 5, 5);
-		gbc_lblMatchSection.gridx = 5;
-		gbc_lblMatchSection.gridy = 1;
-		contentPane.add(lblMatchSection, gbc_lblMatchSection);
 		
 		lblEndgame = new JLabel("Endgame");
 		GridBagConstraints gbc_lblEndgame = new GridBagConstraints();
