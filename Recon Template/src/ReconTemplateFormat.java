@@ -4,6 +4,9 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 
 import javax.swing.Box;
 import javax.swing.JButton;
@@ -25,6 +28,7 @@ public class ReconTemplateFormat extends JFrame {
 	
 	
 //	private JTabbedPane tabPane;
+//	private JTextArea text;
 	private JPanel contentPane;
 	private JTextField textField;
 	private JTextField textField_2;
@@ -64,6 +68,7 @@ public class ReconTemplateFormat extends JFrame {
 	private JTextField textField_8;
 	private JTextField textField_9;
 	private JLabel lblTally;
+	private JMenuItem mntmSaveas;
 	
 //	ReconTemplateFormat rf; 
 
@@ -92,7 +97,7 @@ public class ReconTemplateFormat extends JFrame {
 //		ReconTemplateFormat rf = new ReconTemplateFormat();
 		
 //		tabPane = new JTabbedPane();
-//		tabPane.addTab("Rename this", rf);
+//		tabPane.addTab("Rename this", rf);]
 		
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -125,6 +130,24 @@ public class ReconTemplateFormat extends JFrame {
 			}
 		});
 		mnSampleMenu.add(mntmSampleMenuItemExit);
+		
+		
+		//Adds functionality for "Save (as)" button in "File" item
+	mntmSaveas = new JMenuItem("Save (as)");
+		mntmSaveas.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					BufferedWriter bw = new BufferedWriter(new FileWriter ("name"));
+					
+//					bw.write (text.getText());
+					bw.close();
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+		}); 
+		mnSampleMenu.add(mntmSaveas);
 /*		public void actionPerformed(ActionEvent e) {
 			System.exit(0);
 		} */
@@ -419,6 +442,11 @@ public class ReconTemplateFormat extends JFrame {
 		contentPane.add(btnNewMatch, gbc_btnNewMatch);
 	}
 	
+	
+//	public ReconTemplateFormat () {
+		
+	}
+	
 /*	public void actionPerformed(ActionEvent e) {
 		String name = e.getActionCommand();
 		
@@ -426,4 +454,4 @@ public class ReconTemplateFormat extends JFrame {
 			System.exit(0);
 		} 
 	} */
-}
+// }
