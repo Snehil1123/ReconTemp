@@ -129,25 +129,25 @@ public class ReconTemplateFormat extends JFrame {
 				System.exit(0);
 			}
 		});
-		mnSampleMenu.add(mntmSampleMenuItemExit);
 		
 		
 		//Adds functionality for "Save (as)" button in "File" item
 	mntmSaveas = new JMenuItem("Save (as)");
-		mntmSaveas.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				try {
-					BufferedWriter bw = new BufferedWriter(new FileWriter ("name"));
-					
+	mntmSaveas.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+			try {
+				BufferedWriter bw = new BufferedWriter(new FileWriter ("name"));
+				
 //					bw.write (text.getText());
-					bw.close();
-				} catch (IOException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
+				bw.close();
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
 			}
-		}); 
-		mnSampleMenu.add(mntmSaveas);
+		}
+	}); 
+	mnSampleMenu.add(mntmSaveas);
+		mnSampleMenu.add(mntmSampleMenuItemExit);
 /*		public void actionPerformed(ActionEvent e) {
 			System.exit(0);
 		} */
