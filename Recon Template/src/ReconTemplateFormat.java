@@ -71,6 +71,7 @@ public class ReconTemplateFormat extends JFrame {
 	private JMenuItem mntmSaveas;
 	
 //	ReconTemplateFormat rf; 
+//	static ReconTemplateFormat frame = new ReconTemplateFormat();
 
 	/**
 	 * Launch the application.
@@ -90,7 +91,24 @@ public class ReconTemplateFormat extends JFrame {
 
 	/**
 	 * Create the frame.
+	 * @return 
 	 */
+	
+/*	public ReconTemplateFormat () {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+//					ReconTemplateFormat frame = new ReconTemplateFormat();
+//					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	} */
+
+	
+	
 	public ReconTemplateFormat() {
 		
 		
@@ -441,6 +459,26 @@ public class ReconTemplateFormat extends JFrame {
 		gbc_btnNewMatch.gridy = 16;
 		contentPane.add(btnNewMatch, gbc_btnNewMatch);
 	}
+	
+/*	public void doIt () {
+		frame.initialize();
+	} */
+	
+	
+	
+/*	public void actionPerformed(ActionEvent e) {
+		String name = e.getActionCommand();
+		
+		if (name.equals("New")) {
+			ReconTemplateFormat frame = new ReconTemplateFormat();
+			frame.initialize();
+		} 
+	} 
+
+	private void initialize() {
+		ReconTemplateFormat frame = new ReconTemplateFormat();
+	} */
+	
 	
 	
 //	public ReconTemplateFormat () {
